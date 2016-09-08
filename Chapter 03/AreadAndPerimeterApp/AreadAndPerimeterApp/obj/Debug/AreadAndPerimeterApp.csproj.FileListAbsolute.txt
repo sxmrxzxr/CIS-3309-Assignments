@@ -1,0 +1,9 @@
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\bin\Debug\AreadAndPerimeterApp.exe.config
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\bin\Debug\AreadAndPerimeterApp.exe
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\bin\Debug\AreadAndPerimeterApp.pdb
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.csprojResolveAssemblyReference.cache
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.frmMain.resources
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.Properties.Resources.resources
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.csproj.GenerateResource.Cache
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.exe
+C:\Users\tue95606\Documents\Visual Studio 2015\Exercise starts\Chapter 03\AreadAndPerimeterApp\AreadAndPerimeterApp\obj\Debug\AreadAndPerimeterApp.pdb
