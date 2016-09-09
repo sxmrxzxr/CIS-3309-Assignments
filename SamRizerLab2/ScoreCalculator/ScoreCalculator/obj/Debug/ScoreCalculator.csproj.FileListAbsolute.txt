@@ -1,0 +1,9 @@
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\bin\Debug\ScoreCalculator.exe.config
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\bin\Debug\ScoreCalculator.exe
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\bin\Debug\ScoreCalculator.pdb
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.csprojResolveAssemblyReference.cache
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.frmMain.resources
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.Properties.Resources.resources
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.csproj.GenerateResource.Cache
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.exe
+c:\users\tue95606\documents\visual studio 2015\Projects\ScoreCalculator\ScoreCalculator\obj\Debug\ScoreCalculator.pdb
