@@ -20,7 +20,7 @@ namespace ScoreCalculator
         int total = 0;
         int count = 0;
         //int[] scoresArray = new int[20];
-        List<int> scoresArray = new List<int>;
+        List<int> scoresArray = new List<int>();
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace ScoreCalculator
                     scoresArray.Add(score);
                     total += score;
                     //count += 1;
-                    int average = total / count;
+                    int average = total / scoresArray.Count;
                     txtScoreTotal.Text = total.ToString();
                     txtScoreCount.Text = scoresArray.Count.ToString();
                     txtAverage.Text = average.ToString();
@@ -74,7 +74,7 @@ namespace ScoreCalculator
             txtScoreCount.Text = "";
             txtAverage.Text = "";
             txtScore.Focus();
-            scoresArray = new List<int>;
+            scoresArray = new List<int>();
         }
 
         public bool IsValidData()
