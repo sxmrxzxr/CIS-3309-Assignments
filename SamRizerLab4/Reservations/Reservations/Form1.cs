@@ -33,10 +33,10 @@ namespace Reservations
             return true;
         }
 
-        //public bool IsDateTime(TextBox textBox, string name)
-        //{
-
-        //}
+        /*public bool IsDateTime(TextBox textBox, string name)
+        {
+            Convert.ToDateTime(textBox.Text);
+        }*/
 
         //public bool IsWithinRange(TextBox textBox, string name,
         //    DateTime min, DateTime max)
@@ -51,10 +51,47 @@ namespace Reservations
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            DateTime arrivalDate = Convert.ToDateTime(txtArrivalDate.ToString());
-            DateTime departureDate = Convert.ToDateTime(txtDepartureDate.ToString());
+            DateTime arrivalDate = Convert.ToDateTime(txtArrivalDate.Text);
+            DateTime departureDate = Convert.ToDateTime(txtDepartureDate.Text);
 
+            double nights = (departureDate - arrivalDate).TotalDays;
+            double nightCount = 0;
+            double price = 0;
 
+            while (nightCount < nights)
+            {
+                //MessageBox.Show(arrivalDate.AddDays(nightCount).DayOfWeek.ToString());
+
+                if (arrivalDate.AddDays(nightCount).DayOfWeek.Equals(DayOfWeek.Friday) || arrivalDate.AddDays(nightCount).DayOfWeek.Equals(DayOfWeek.Saturday))
+                {
+                    price += 150;
+                }
+                else
+                {
+                    price += 120;
+                }
+
+                nightCount++;
+            }
+
+            double avgPrice = price / nights;
+
+            txtNights.Text = nights.ToString();
+            txtTotalPrice.Text = price.ToString();
+            txtAvgPrice.Text = avgPrice.ToString();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+
+            txtArrivalDate.Text = today.Date.ToShortDateString();
+            txtDepartureDate.Text = today.AddDays(3).Date.ToShortDateString();
         }
     }
 }

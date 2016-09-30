@@ -110,6 +110,7 @@ namespace Reservations
             this.Label1.TabIndex = 24;
             this.Label1.Text = "Arrival date:";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtNights
             // 
@@ -170,6 +171,7 @@ namespace Reservations
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservations";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
