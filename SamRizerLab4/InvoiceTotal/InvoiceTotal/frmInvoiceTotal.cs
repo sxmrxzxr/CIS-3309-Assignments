@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace InvoiceTotal
 {
-    public partial class Form1 : Form
+    public partial class frmInvoiceTotal : Form
     {
-        public Form1()
+        public frmInvoiceTotal()
         {
             InitializeComponent();
         }
 
-        const decimal SalesTaxPct = 7.75m;
+        decimal SalesTaxPct = 7.75m;
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -98,6 +98,18 @@ namespace InvoiceTotal
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            frmSalesTax f = new frmSalesTax();
+            //f.Show();
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                SalesTaxPct = Convert.ToDecimal(f.Tag);
+                f.Close();
+            }
         }
     }
 }

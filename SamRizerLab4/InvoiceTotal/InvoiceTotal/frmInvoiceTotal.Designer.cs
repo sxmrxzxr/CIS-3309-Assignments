@@ -1,6 +1,6 @@
 namespace InvoiceTotal
 {
-    partial class Form1
+    partial class frmInvoiceTotal
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,7 @@ namespace InvoiceTotal
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTax = new System.Windows.Forms.TextBox();
+            this.btnChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -149,13 +150,24 @@ namespace InvoiceTotal
             this.txtTax.TabIndex = 23;
             this.txtTax.TabStop = false;
             // 
-            // Form1
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(230, 94);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(75, 23);
+            this.btnChange.TabIndex = 24;
+            this.btnChange.Text = "Change Percent";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // frmInvoiceTotal
             // 
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(228, 202);
+            this.ClientSize = new System.Drawing.Size(343, 202);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.txtTax);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSubtotal);
@@ -169,7 +181,7 @@ namespace InvoiceTotal
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "frmInvoiceTotal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Total";
             this.ResumeLayout(false);
@@ -191,6 +203,7 @@ namespace InvoiceTotal
         private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTax;
+        private System.Windows.Forms.Button btnChange;
     }
 }
 

@@ -58,17 +58,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmInvoiceTotal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmInvoiceTotal.Designer.cs">
+      <DependentUpon>frmInvoiceTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesTax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesTax.Designer.cs">
+      <DependentUpon>frmSalesTax.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="frmInvoiceTotal.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>frmInvoiceTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesTax.resx">
+      <DependentUpon>frmSalesTax.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

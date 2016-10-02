@@ -12,9 +12,16 @@ namespace InvoiceTotal
 {
     public partial class frmSalesTax : Form
     {
+
         public frmSalesTax()
         {
             InitializeComponent();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            decimal salesTax = Convert.ToDecimal(txtInput.Text);
+            Tag = salesTax;
         }
     }
 }
