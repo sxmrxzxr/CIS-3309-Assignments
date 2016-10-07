@@ -121,8 +121,9 @@
             this.btnMakeMatrixB.Name = "btnMakeMatrixB";
             this.btnMakeMatrixB.Size = new System.Drawing.Size(98, 23);
             this.btnMakeMatrixB.TabIndex = 7;
-            this.btnMakeMatrixB.Text = "Make Matrix A";
+            this.btnMakeMatrixB.Text = "Make Matrix B";
             this.btnMakeMatrixB.UseVisualStyleBackColor = true;
+            this.btnMakeMatrixB.Click += new System.EventHandler(this.btnMakeMatrixB_Click);
             // 
             // txtMatrixARows
             // 

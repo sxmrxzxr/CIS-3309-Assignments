@@ -68,9 +68,18 @@ namespace RizerMatrix
             }
         }
 
+        private void btnMakeMatrixB_Click(object sender, EventArgs e)
+        {
+            if (IsValidData())
+            {
+                B = MakeMatrix(Convert.ToInt32(txtMatrixBRows.Text), Convert.ToInt32(txtMatrixBCols.Text));
+                txtMatrixB.Text = MatrixToString(B);
+            }
+        }
+
         private bool IsValidData()
         {
-            throw new NotImplementedException();
-        }
+            return true;
+        }        
     }
 }
