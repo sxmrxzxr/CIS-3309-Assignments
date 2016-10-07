@@ -113,6 +113,7 @@
             this.btnMakeMatrixA.TabIndex = 6;
             this.btnMakeMatrixA.Text = "Make Matrix A";
             this.btnMakeMatrixA.UseVisualStyleBackColor = true;
+            this.btnMakeMatrixA.Click += new System.EventHandler(this.btnMakeMatrixA_Click);
             // 
             // btnMakeMatrixB
             // 
