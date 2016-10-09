@@ -42,9 +42,9 @@
             this.txtMatrixBCols = new System.Windows.Forms.TextBox();
             this.btnMakeBIdentity = new System.Windows.Forms.Button();
             this.gbxSelectOperation = new System.Windows.Forms.GroupBox();
-            this.rbnMultiply = new System.Windows.Forms.RadioButton();
-            this.rbnAdd = new System.Windows.Forms.RadioButton();
             this.rbnSubtract = new System.Windows.Forms.RadioButton();
+            this.rbnAdd = new System.Windows.Forms.RadioButton();
+            this.rbnMultiply = new System.Windows.Forms.RadioButton();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -131,6 +131,7 @@
             this.txtMatrixARows.Name = "txtMatrixARows";
             this.txtMatrixARows.Size = new System.Drawing.Size(100, 20);
             this.txtMatrixARows.TabIndex = 8;
+            this.txtMatrixARows.TextChanged += new System.EventHandler(this.txtMatrixARows_TextChanged);
             // 
             // txtMatrixBRows
             // 
@@ -161,6 +162,7 @@
             this.btnMakeBIdentity.TabIndex = 12;
             this.btnMakeBIdentity.Text = "Make B Identity";
             this.btnMakeBIdentity.UseVisualStyleBackColor = true;
+            this.btnMakeBIdentity.Click += new System.EventHandler(this.btnMakeBIdentity_Click);
             // 
             // gbxSelectOperation
             // 
@@ -174,16 +176,16 @@
             this.gbxSelectOperation.TabStop = false;
             this.gbxSelectOperation.Text = "Select Operation";
             // 
-            // rbnMultiply
+            // rbnSubtract
             // 
-            this.rbnMultiply.AutoSize = true;
-            this.rbnMultiply.Location = new System.Drawing.Point(7, 20);
-            this.rbnMultiply.Name = "rbnMultiply";
-            this.rbnMultiply.Size = new System.Drawing.Size(60, 17);
-            this.rbnMultiply.TabIndex = 0;
-            this.rbnMultiply.TabStop = true;
-            this.rbnMultiply.Text = "Multiply";
-            this.rbnMultiply.UseVisualStyleBackColor = true;
+            this.rbnSubtract.AutoSize = true;
+            this.rbnSubtract.Location = new System.Drawing.Point(124, 20);
+            this.rbnSubtract.Name = "rbnSubtract";
+            this.rbnSubtract.Size = new System.Drawing.Size(65, 17);
+            this.rbnSubtract.TabIndex = 2;
+            this.rbnSubtract.TabStop = true;
+            this.rbnSubtract.Text = "Subtract";
+            this.rbnSubtract.UseVisualStyleBackColor = true;
             // 
             // rbnAdd
             // 
@@ -196,16 +198,16 @@
             this.rbnAdd.Text = "Add";
             this.rbnAdd.UseVisualStyleBackColor = true;
             // 
-            // rbnSubtract
+            // rbnMultiply
             // 
-            this.rbnSubtract.AutoSize = true;
-            this.rbnSubtract.Location = new System.Drawing.Point(124, 20);
-            this.rbnSubtract.Name = "rbnSubtract";
-            this.rbnSubtract.Size = new System.Drawing.Size(65, 17);
-            this.rbnSubtract.TabIndex = 2;
-            this.rbnSubtract.TabStop = true;
-            this.rbnSubtract.Text = "Subtract";
-            this.rbnSubtract.UseVisualStyleBackColor = true;
+            this.rbnMultiply.AutoSize = true;
+            this.rbnMultiply.Location = new System.Drawing.Point(7, 20);
+            this.rbnMultiply.Name = "rbnMultiply";
+            this.rbnMultiply.Size = new System.Drawing.Size(60, 17);
+            this.rbnMultiply.TabIndex = 0;
+            this.rbnMultiply.TabStop = true;
+            this.rbnMultiply.Text = "Multiply";
+            this.rbnMultiply.UseVisualStyleBackColor = true;
             // 
             // btnCalculate
             // 
@@ -215,6 +217,7 @@
             this.btnCalculate.TabIndex = 14;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnClear
             // 
@@ -224,6 +227,7 @@
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Clear Matricies";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnExit
             // 
