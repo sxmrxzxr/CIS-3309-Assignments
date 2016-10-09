@@ -52,6 +52,7 @@
     <Compile Include="frmInvMaint.designer.cs">
       <DependentUpon>frmInvMaint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invitem.cs" />
     <Compile Include="InvItemDB.cs" />
     <Compile Include="frmNewItem.cs">
       <SubType>Form</SubType>

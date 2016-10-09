@@ -18,8 +18,10 @@ namespace InventoryMaintenance
         }
 
         // Add a statement here that declares the inventory item.
+        InvItem i = new InvItem();
 
         // Add a method here that gets and returns a new item.
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
