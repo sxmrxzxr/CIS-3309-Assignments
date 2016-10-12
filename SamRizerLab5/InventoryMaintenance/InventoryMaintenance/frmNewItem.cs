@@ -21,7 +21,10 @@ namespace InventoryMaintenance
         InvItem i = new InvItem();
 
         // Add a method here that gets and returns a new item.
+        public InvItem GetNewItem()
+        {
 
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
