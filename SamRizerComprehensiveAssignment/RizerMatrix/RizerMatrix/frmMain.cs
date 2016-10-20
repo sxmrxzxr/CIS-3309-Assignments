@@ -12,68 +12,16 @@ namespace RizerMatrix
 {
     public partial class frmMain : Form
     {
-        public double[,] A;
-        public double[,] B;
-        public double[,] C;
-
-        Random ran = new Random();
+        Matrix A;
+        Matrix B;
+        Matrix C;
 
         public frmMain()
         {
             InitializeComponent();
             rbnMultiply.Checked = true;
         }
-
-        private double[,] MakeMatrix(int r, int c)
-        {
-            double[,] x = new double[r, c];
-
-            for (int i = 0; i < r; i++)
-            {
-                for (int j = 0; j < c; j++)
-                {
-                    x[i, j] = Math.Round(ran.NextDouble() * 10.0, 1);
-                }
-            }
-
-            return x;
-        }
-
-        private void MakeIdentityMatrix(int r, int c)
-        {
-            B = new double[r, c];
-
-            for (int i = 0; i < r; i++)
-            {
-                for (int j = 0; j < c; j++)
-                {
-                    if (i == j)
-                    {
-                        B[i, j] = 1.0;
-                    }
-                    else
-                    {
-                        B[i, j] = 0.0;
-                    }
-                }
-            }
-        }
-
-        private string MatrixToString(double[,] x)
-        {
-            string s = "";
-            
-            for (int i = 0; i < x.GetLength(0); i++)
-            {
-                for (int j = 0; j < x.GetLength(1); j++)
-                {
-                    s += x[i, j].ToString() + "\t";
-                }
-                s += "\r\n";
-            }
-            
-            return s;
-        }
+        
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -81,119 +29,51 @@ namespace RizerMatrix
         }
 
         private void btnMakeMatrixA_Click(object sender, EventArgs e)
-        {            
-            if (IsValidData(txtMatrixARows) && IsValidData(txtMatrixACols))
-            {
-                A = MakeMatrix(Convert.ToInt32(txtMatrixARows.Text), Convert.ToInt32(txtMatrixACols.Text));
-                txtMatrixA.Text = MatrixToString(A);
-            }
+        {
+            A = new Matrix(Convert.ToInt32(txtMatrixARows.Text), Convert.ToInt32(txtMatrixACols.Text));
+            A.PopulateRand();
+
+            txtMatrixA.Text = A.ToString();
         }
 
         private void btnMakeMatrixB_Click(object sender, EventArgs e)
         {
-            if (IsValidData(txtMatrixBRows) && IsValidData(txtMatrixBCols))
-            {
-                B = MakeMatrix(Convert.ToInt32(txtMatrixBRows.Text), Convert.ToInt32(txtMatrixBCols.Text));
-                txtMatrixB.Text = MatrixToString(B);
-            }
+            B = new Matrix(Convert.ToInt32(txtMatrixBRows.Text), Convert.ToInt32(txtMatrixBCols.Text));
+            B.PopulateRand();
+
+            txtMatrixB.Text = B.ToString();
         }
 
         private bool IsValidData(TextBox t)
         {
-            int d = 0;
-
-            if (Int32.TryParse(t.Text, out d))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid integer for the text box");
-                return false;
-            }
+            return true;
         }
 
         private void btnMakeBIdentity_Click(object sender, EventArgs e)
         {
-            if (IsValidData(txtMatrixBRows) && IsValidData(txtMatrixBCols))
-            {
-                MakeIdentityMatrix(Convert.ToInt32(txtMatrixBRows.Text), Convert.ToInt32(txtMatrixBCols.Text));
-                txtMatrixB.Text = MatrixToString(B);
-            }
+            B = new Matrix(Convert.ToInt32(txtMatrixBRows.Text), Convert.ToInt32(txtMatrixBCols.Text));
+            B.MakeId();
+
+            txtMatrixB.Text = B.ToString();
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (rbnMultiply.Checked)
-            {
-                MultiplyMatrix();
-                txtMatrixC.Text = MatrixToString(C);
-            }
-            else if (rbnAdd.Checked && (A.GetLength(0) == B.GetLength(0) && A.GetLength(1) == B.GetLength(1)))
-            {
-                AddMatrix();
-                txtMatrixC.Text = MatrixToString(C);
-            }
+            if (rbnAdd.Checked)
+                C = A + B;
+            else if (rbnSubtract.Checked)
+                C = A - B;
+            else if (rbnMultiply.Checked)
+                C = A * B;
             else
-            {
-                if ((A.GetLength(0) == B.GetLength(0) && A.GetLength(1) == B.GetLength(1)))
-                {
-                    SubtractMatrix();
-                    txtMatrixC.Text = MatrixToString(C);
-                }
-            }
-        }
+                MessageBox.Show((A == B).ToString());
 
-        private void SubtractMatrix()
-        {
-            C = new double[A.GetLength(0), A.GetLength(1)];
-
-            for (int i = 0; i < A.GetLength(0); i++)
-            {
-                for (int j = 0; j < A.GetLength(1); j++)
-                {
-                    C[i, j] = A[i, j] - B[i, j];
-                }
-            }
-        }
-
-        private void AddMatrix()
-        {
-            C = new double[A.GetLength(0), A.GetLength(1)];
-
-            for (int i = 0; i < A.GetLength(0); i++)
-            {
-                for (int j = 0; j < A.GetLength(1); j++)
-                {
-                    C[i, j] = A[i, j] + B[i, j];
-                }
-            }
-        }
-
-        private void MultiplyMatrix()
-        {
-            C = new double[A.GetLength(0), B.GetLength(1)];
-
-            for (int i = 0; i < A.GetLength(0); i++)
-            {
-                for (int j = 0; j < B.GetLength(1); j++)
-                {
-                    for (int k = 0; k < A.GetLength(1); k++)
-                    {
-                        C[i, j] += A[i, k] * B[k, j];
-                        Math.Round(C[i, j], 1);
-                    }
-                }
-            }   
+            txtMatrixC.Text = C.ToString();
         }
 
         private void txtMatrixARows_TextChanged(object sender, EventArgs e)
-        { /*
-            if (txtMatrixARows.Text == null)
-            {
-                MessageBox.Show("Please enter a value before leaving the text box.");
-                txtMatrixARows.Focus();
-            }*/
+        { 
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -205,6 +85,13 @@ namespace RizerMatrix
             txtMatrixA.Text = "";
             txtMatrixB.Text = "";
             txtMatrixC.Text = "";
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            B = A;
+
+            txtMatrixB.Text = B.ToString();
         }
     }
 }

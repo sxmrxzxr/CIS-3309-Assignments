@@ -42,12 +42,14 @@
             this.txtMatrixBCols = new System.Windows.Forms.TextBox();
             this.btnMakeBIdentity = new System.Windows.Forms.Button();
             this.gbxSelectOperation = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.rbnSubtract = new System.Windows.Forms.RadioButton();
             this.rbnAdd = new System.Windows.Forms.RadioButton();
             this.rbnMultiply = new System.Windows.Forms.RadioButton();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnCopy = new System.Windows.Forms.Button();
             this.gbxSelectOperation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +131,7 @@
             // 
             this.txtMatrixARows.Location = new System.Drawing.Point(116, 207);
             this.txtMatrixARows.Name = "txtMatrixARows";
-            this.txtMatrixARows.Size = new System.Drawing.Size(100, 20);
+            this.txtMatrixARows.Size = new System.Drawing.Size(147, 20);
             this.txtMatrixARows.TabIndex = 8;
             this.txtMatrixARows.TextChanged += new System.EventHandler(this.txtMatrixARows_TextChanged);
             // 
@@ -137,26 +139,26 @@
             // 
             this.txtMatrixBRows.Location = new System.Drawing.Point(116, 236);
             this.txtMatrixBRows.Name = "txtMatrixBRows";
-            this.txtMatrixBRows.Size = new System.Drawing.Size(100, 20);
+            this.txtMatrixBRows.Size = new System.Drawing.Size(147, 20);
             this.txtMatrixBRows.TabIndex = 9;
             // 
             // txtMatrixACols
             // 
-            this.txtMatrixACols.Location = new System.Drawing.Point(222, 207);
+            this.txtMatrixACols.Location = new System.Drawing.Point(269, 207);
             this.txtMatrixACols.Name = "txtMatrixACols";
-            this.txtMatrixACols.Size = new System.Drawing.Size(100, 20);
+            this.txtMatrixACols.Size = new System.Drawing.Size(126, 20);
             this.txtMatrixACols.TabIndex = 10;
             // 
             // txtMatrixBCols
             // 
-            this.txtMatrixBCols.Location = new System.Drawing.Point(222, 236);
+            this.txtMatrixBCols.Location = new System.Drawing.Point(269, 236);
             this.txtMatrixBCols.Name = "txtMatrixBCols";
-            this.txtMatrixBCols.Size = new System.Drawing.Size(100, 20);
+            this.txtMatrixBCols.Size = new System.Drawing.Size(126, 20);
             this.txtMatrixBCols.TabIndex = 11;
             // 
             // btnMakeBIdentity
             // 
-            this.btnMakeBIdentity.Location = new System.Drawing.Point(328, 234);
+            this.btnMakeBIdentity.Location = new System.Drawing.Point(401, 234);
             this.btnMakeBIdentity.Name = "btnMakeBIdentity";
             this.btnMakeBIdentity.Size = new System.Drawing.Size(98, 23);
             this.btnMakeBIdentity.TabIndex = 12;
@@ -166,15 +168,27 @@
             // 
             // gbxSelectOperation
             // 
+            this.gbxSelectOperation.Controls.Add(this.radioButton1);
             this.gbxSelectOperation.Controls.Add(this.rbnSubtract);
             this.gbxSelectOperation.Controls.Add(this.rbnAdd);
             this.gbxSelectOperation.Controls.Add(this.rbnMultiply);
             this.gbxSelectOperation.Location = new System.Drawing.Point(10, 263);
             this.gbxSelectOperation.Name = "gbxSelectOperation";
-            this.gbxSelectOperation.Size = new System.Drawing.Size(200, 49);
+            this.gbxSelectOperation.Size = new System.Drawing.Size(251, 49);
             this.gbxSelectOperation.TabIndex = 13;
             this.gbxSelectOperation.TabStop = false;
             this.gbxSelectOperation.Text = "Select Operation";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(190, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "A == B";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // rbnSubtract
             // 
@@ -211,9 +225,9 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(216, 277);
+            this.btnCalculate.Location = new System.Drawing.Point(297, 269);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.Size = new System.Drawing.Size(92, 23);
             this.btnCalculate.TabIndex = 14;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -221,7 +235,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(297, 277);
+            this.btnClear.Location = new System.Drawing.Point(297, 298);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(92, 23);
             this.btnClear.TabIndex = 15;
@@ -231,19 +245,30 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(395, 277);
+            this.btnExit.Location = new System.Drawing.Point(395, 269);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(104, 52);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnCopy
+            // 
+            this.btnCopy.Location = new System.Drawing.Point(401, 205);
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(98, 23);
+            this.btnCopy.TabIndex = 17;
+            this.btnCopy.Text = "Copy A to B";
+            this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 407);
+            this.ClientSize = new System.Drawing.Size(511, 338);
+            this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCalculate);
@@ -292,6 +317,8 @@
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btnCopy;
     }
 }
 
