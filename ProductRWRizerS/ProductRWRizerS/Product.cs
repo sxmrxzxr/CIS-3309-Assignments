@@ -8,11 +8,16 @@ namespace ProductRWRizerS
 {
     public class Product
     {
-        public string desc;
-        public string id;
-        public double price;
-        public int qty;
-        public string type;
+        private string desc;
+        private string id;
+        private double price;
+        private int qty;
+        private string type;
+
+        public Product()
+        {
+
+        }
 
         public Product(string desc, string id, double price, int qty, string type)
         {
@@ -83,9 +88,19 @@ namespace ProductRWRizerS
             }
         }
 
-        public string GetDisplayText()
+        public string GetDisplayText(string separator)
         {
+            return desc + separator + id + separator + price + separator + qty + separator + type;
+        }
 
+        public string ToCSV()
+        {
+            return GetDisplayText(",");
+        }
+
+        public string ToString()
+        {
+            return GetDisplayText("\r\n");
         }
     }
 }
