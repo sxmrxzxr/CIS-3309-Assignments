@@ -6,7 +6,35 @@ using System.Threading.Tasks;
 
 namespace ProductRWRizerS
 {
-    class TShirt : Apparel
+    public class TShirt : Apparel
     {
+        private string size;
+
+        public TShirt()
+        {
+
+        }
+
+        public TShirt(string desc, string id, double price, int qty, string type, string color, string manufacturer, string material, string size) : base(desc, id, price, qty, type, color, manufacturer, material)
+        {
+            this.size = size;
+        }
+
+        public string Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+            }
+        }
+
+        public override string GetDisplayText(string separator)
+        {
+            return base.GetDisplayText() + separator + size;
+        }
     }
 }

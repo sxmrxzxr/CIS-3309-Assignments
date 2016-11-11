@@ -6,7 +6,35 @@ using System.Threading.Tasks;
 
 namespace ProductRWRizerS
 {
-    class Software : Disk
+    public class Software : Disk
     {
+        private string typeSoft;
+
+        public Software()
+        {
+
+        }
+
+        public Software(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk, string typeSoft) : base(desc, id, price, qty, type, releaseDate, numDisks, size, typeDisk)
+        {
+            this.typeSoft = typeSoft;
+        }
+
+        public string TypeSoft
+        {
+            get
+            {
+                return typeSoft;
+            }
+            set
+            {
+                typeSoft = value;
+            }
+        }
+
+        public override string GetDisplayText(string separator)
+        {
+            return base.GetDisplayText() + separator + typeSoft;
+        }
     }
 }
