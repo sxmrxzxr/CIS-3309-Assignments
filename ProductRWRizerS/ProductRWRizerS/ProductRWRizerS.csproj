@@ -46,15 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apparel.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Disk.cs" />
+    <Compile Include="DressShirt.cs" />
+    <Compile Include="Entertainment.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListProduct.cs" />
+    <Compile Include="Media.cs" />
+    <Compile Include="Movie.cs" />
+    <Compile Include="Music.cs" />
+    <Compile Include="Pants.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="ProductList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Software.cs" />
+    <Compile Include="TShirt.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

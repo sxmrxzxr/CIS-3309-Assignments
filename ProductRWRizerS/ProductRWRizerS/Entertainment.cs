@@ -34,7 +34,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + runTime.ToString();
+            return base.GetDisplayText(separator) + separator + runTime.ToString();
         }
     }
 }

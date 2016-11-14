@@ -10,11 +10,6 @@ namespace ProductRWRizerS
     {
         private string size;
 
-        public TShirt()
-        {
-
-        }
-
         public TShirt(string desc, string id, double price, int qty, string type, string color, string manufacturer, string material, string size) : base(desc, id, price, qty, type, color, manufacturer, material)
         {
             this.size = size;
@@ -34,7 +29,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + size;
+            return base.GetDisplayText(separator) + separator + size;
         }
     }
 }

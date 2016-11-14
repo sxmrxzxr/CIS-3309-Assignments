@@ -11,11 +11,6 @@ namespace ProductRWRizerS
         private int neck;
         private int sleeve;
 
-        public DressShirt()
-        {
-
-        }
-
         public DressShirt(string desc, string id, double price, int qty, string type, string color, string manufacturer, string material, int neck, int sleeve) : base(desc, id, price, qty, type, color, manufacturer, material)
         {
             this.neck = neck;
@@ -48,7 +43,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + neck + separator + sleeve;
+            return base.GetDisplayText(separator) + separator + neck + separator + sleeve;
         }
     }
 }

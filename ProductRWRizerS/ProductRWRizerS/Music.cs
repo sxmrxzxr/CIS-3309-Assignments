@@ -62,7 +62,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + artist + separator + genre + separator + label;
+            return base.GetDisplayText(separator) + separator + artist + separator + genre + separator + label;
         }
     }
 }

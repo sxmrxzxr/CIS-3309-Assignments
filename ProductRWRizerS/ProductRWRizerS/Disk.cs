@@ -21,7 +21,7 @@ namespace ProductRWRizerS
         {
             this.numDisks = numDisks;
             this.size = size;
-            this.typeDisk = typeDisks;
+            this.typeDisk = typeDisk;
         }
 
         public int NumDisks
@@ -62,7 +62,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + numDisks + separator + size + separator + typeDisk;
+            return base.GetDisplayText(separator) + separator + numDisks + separator + size + separator + typeDisk;
         }
     }
 }

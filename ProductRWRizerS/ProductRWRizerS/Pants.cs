@@ -11,11 +11,6 @@ namespace ProductRWRizerS
         private int inseam;
         private int waist;
 
-        public Pants()
-        {
-
-        }
-
         public Pants(string desc, string id, double price, int qty, string type, string color, string manufacturer, string material, int inseam, int waist) : base(desc, id, price, qty, type, color, manufacturer, material)
         {
             this.inseam = inseam;
@@ -48,7 +43,7 @@ namespace ProductRWRizerS
 
         public override string GetDisplayText(string separator)
         {
-            return base.GetDisplayText() + separator + inseam + separator + waist;
+            return base.GetDisplayText(separator) + separator + inseam + separator + waist;
         }
     }
 }

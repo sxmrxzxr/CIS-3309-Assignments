@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductRWRizerS
 {
-    public class Product
+    public abstract class Product
     {
         private string desc;
         private string id;
@@ -88,7 +88,7 @@ namespace ProductRWRizerS
             }
         }
 
-        public string GetDisplayText(string separator)
+        public virtual string GetDisplayText(string separator)
         {
             return desc + separator + id + separator + price + separator + qty + separator + type;
         }
@@ -98,7 +98,7 @@ namespace ProductRWRizerS
             return GetDisplayText(",");
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return GetDisplayText("\r\n");
         }
