@@ -14,11 +14,6 @@ namespace ProductRWRizerS
         private int qty;
         private string type;
 
-        public Product()
-        {
-
-        }
-
         public Product(string desc, string id, double price, int qty, string type)
         {
             this.desc = desc;

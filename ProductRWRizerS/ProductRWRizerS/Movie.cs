@@ -11,11 +11,6 @@ namespace ProductRWRizerS
         private string director;
         private string producer;
 
-        public Movie()
-        {
-
-        }
-
         public Movie(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk, TimeSpan runTime, string director, string producer) : base(desc, id, price, qty, type, releaseDate, numDisks, size, typeDisk, runTime)
         {
             this.director = director;
