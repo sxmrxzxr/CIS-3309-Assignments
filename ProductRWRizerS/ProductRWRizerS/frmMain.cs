@@ -194,6 +194,8 @@ namespace ProductRWRizerS
 
         public void drawProduct()
         {
+            try
+            {
                 Product p = l.ElementAt(idx);
                 txtType.Text = p.Type;
                 txtID.Text = p.ID;
@@ -216,13 +218,20 @@ namespace ProductRWRizerS
                     drawDressShirt(p);
                 else
                     MessageBox.Show("Not found.");
+            }
+            catch (ArgumentOutOfRangeException a)
+            {
+                MessageBox.Show(a.ToString());
+                idx = 0;
+                drawProduct();
+            } 
             
         }
 
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            l.ToCSV();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -252,6 +261,25 @@ namespace ProductRWRizerS
             }
 
             drawProduct();
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (idx < 0)
+            {
+                idx = l.Count;
+            }
+            else
+            {
+                idx--;
+            }
+
+            drawProduct();
+        }
+
+        private void btnWriteBin_Click(object sender, EventArgs e)
+        {
+            l.writeToBinary();
         }
     }
 }

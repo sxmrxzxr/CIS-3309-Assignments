@@ -289,6 +289,7 @@
             this.btnPrevious.TabIndex = 27;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnRead
             // 
@@ -308,6 +309,7 @@
             this.btnWriteBin.TabIndex = 29;
             this.btnWriteBin.Text = "Write Bin";
             this.btnWriteBin.UseVisualStyleBackColor = true;
+            this.btnWriteBin.Click += new System.EventHandler(this.btnWriteBin_Click);
             // 
             // btnNext
             // 
