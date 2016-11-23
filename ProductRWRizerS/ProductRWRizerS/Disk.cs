@@ -12,10 +12,11 @@ namespace ProductRWRizerS
         private int size;
         private string typeDisk;
 
+        /*
         public Disk()
         {
 
-        }
+        }*/
 
         public Disk(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk) : base(desc, id, price, qty, type, releaseDate)
         {

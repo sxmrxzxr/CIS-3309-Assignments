@@ -12,10 +12,11 @@ namespace ProductRWRizerS
         private int numPages;
         private string publisher;
 
+        /*
         public Book()
         {
 
-        }
+        }*/
 
         public Book(string desc, string id, double price, int qty, string type, DateTime releaseDate, string author, int numPages, string publisher) : base(desc, id, price, qty, type, releaseDate)
         {

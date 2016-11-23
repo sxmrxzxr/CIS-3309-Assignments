@@ -15,42 +15,49 @@ namespace ProductRWRizerS
 
         }
 
-        public new void Add(Product p)
+        public new void AddProduct(Product p)
         {
             this.Add(p);
         }
 
-        public void readFromFile(string filename)
+        public void readFromFile(string filename) 
         {
-            StreamReader read = new StreamReader(File.OpenRead(filename));
-
-            while (!read.EndOfStream)
+            try
             {
-                string line = read.ReadLine();
-                string[] values = line.Split(',');
+                StreamReader read = new StreamReader(File.OpenRead(filename));
 
-                switch (values[0])
+                while (!read.EndOfStream)
                 {
-                    case "DressShirt":
-                        this.Add(new DressShirt(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], Convert.ToInt32(values[8]), Convert.ToInt32(values[9])));
-                        break;
-                    case "Pants":
-                        this.Add(new Pants(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], Convert.ToInt32(values[8]), Convert.ToInt32(values[9])));
-                        break;
-                    case "TShirt":
-                        this.Add(new TShirt(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], values[8]));
-                        break;
-                    case "Software":
-                        this.Add(new Software(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]), Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], values[9]));
-                        break;
-                    case "Movie":
-                        this.Add(new Movie(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]),Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], TimeSpan.Parse(values[9]), values[10], values[11]));
-                        break;
-                    case "Music":
-                        this.Add(new Music(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]), Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], TimeSpan.Parse(values[9]), values[10], values[11], values[12]));
-                        break;
+                    string line = read.ReadLine();
+                    string[] values = line.Split(',');
+
+                    switch (values[0])
+                    {
+                        case "DressShirt":
+                            this.AddProduct(new DressShirt(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], Convert.ToInt32(values[8]), Convert.ToInt32(values[9])));
+                            break;
+                        case "Pants":
+                            this.AddProduct(new Pants(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], Convert.ToInt32(values[8]), Convert.ToInt32(values[9])));
+                            break;
+                        case "TShirt":
+                            this.AddProduct(new TShirt(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], values[5], values[6], values[7], values[8]));
+                            break;
+                        case "Software":
+                            this.AddProduct(new Software(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]), Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], values[9]));
+                            break;
+                        case "Movie":
+                            this.AddProduct(new Movie(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]), Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], TimeSpan.Parse(values[9]), values[10], values[11]));
+                            break;
+                        case "Music":
+                            this.AddProduct(new Music(values[0], values[1], Convert.ToDouble(values[2]), Convert.ToInt32(values[3]), values[4], Convert.ToDateTime(values[5]), Convert.ToInt32(values[6]), Convert.ToInt32(values[7]), values[8], TimeSpan.Parse(values[9]), values[10], values[11], values[12]));
+                            break;
+                    }
                 }
             }
+            catch (FileNotFoundException f)
+            {
+                
+            }            
         }
 
         public override string ToString()

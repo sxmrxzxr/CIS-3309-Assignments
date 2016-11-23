@@ -11,11 +11,11 @@ namespace ProductRWRizerS
         private string artist;
         private string genre;
         private string label;
-
+        /*
         public Music()
         {
 
-        }
+        }*/
 
         public Music(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk, TimeSpan runTime, string artist, string genre, string label) : base(desc, id, price, qty, type, releaseDate, numDisks, size, typeDisk, runTime)
         {

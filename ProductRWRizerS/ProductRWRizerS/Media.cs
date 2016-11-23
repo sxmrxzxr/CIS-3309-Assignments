@@ -10,10 +10,11 @@ namespace ProductRWRizerS
     {
         private DateTime releaseDate;
 
+        /*
         public Media()
         {
 
-        }
+        }*/
 
         public Media(string desc, string id, double price, int qty, string type, DateTime releaseDate) : base(desc, id, price, qty, type)
         {

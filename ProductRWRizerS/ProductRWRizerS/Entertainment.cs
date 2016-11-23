@@ -9,11 +9,11 @@ namespace ProductRWRizerS
     public class Entertainment : Disk
     {
         private TimeSpan runTime;
-
+        /*
         public Entertainment()
         {
 
-        }
+        }*/
 
         public Entertainment(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk, TimeSpan runTime) : base(desc, id, price, qty, type, releaseDate, numDisks, size, typeDisk)
         {

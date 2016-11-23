@@ -9,11 +9,11 @@ namespace ProductRWRizerS
     public class Software : Disk
     {
         private string typeSoft;
-
+        /*
         public Software()
         {
 
-        }
+        }*/
 
         public Software(string desc, string id, double price, int qty, string type, DateTime releaseDate, int numDisks, int size, string typeDisk, string typeSoft) : base(desc, id, price, qty, type, releaseDate, numDisks, size, typeDisk)
         {
